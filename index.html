@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Médico</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<h2>Formulario Médico</h2>
+
+// 1
+<div class="pagina activa" id="p1">
+  <h3>Datos Personales</h3>
+  <input id="nombre" placeholder="Nombre">
+  <input id="cedula" placeholder="Cédula">
+  <input id="edad" type="number" placeholder="Edad">
+
+  <button onclick="siguiente(2)">Siguiente</button>
+</div>
+
+//pagina 2
+<div class="pagina" id="p2">
+  <h3>Familiares</h3>
+  <input id="famNombre" placeholder="Nombre">
+  <input id="parentesco" placeholder="Parentesco">
+  <input id="famEdad" type="number" placeholder="Edad">
+
+  <button onclick="agregarFamiliar()">Agregar</button>
+  <div id="listaFamiliares" class="lista"></div>
+
+  <button onclick="anterior(1)">Atrás</button>
+  <button onclick="siguiente(3)">Siguiente</button>
+</div>
+
+//pagina3
+<div class="pagina" id="p3">
+  <h3>Condiciones de Salud</h3>
+  <input id="enfermedad" placeholder="Enfermedad">
+  <input id="tiempo" placeholder="Tiempo con la enfermedad">
+
+  <button onclick="agregarCondicion()">Agregar</button>
+  <div id="listaCondiciones" class="lista"></div>
+
+  <button onclick="anterior(2)">Atrás</button>
+  <button onclick="siguiente(4)">Siguiente</button>
+</div>
+
+//pagina 4
+<div class="pagina" id="p4">
+  <h3>Internamientos</h3>
+  <input id="fecha" type="date">
+  <input id="centro" placeholder="Centro Médico">
+  <input id="diagnostico" placeholder="Diagnóstico">
+
+  <button onclick="agregarInternamiento()">Agregar</button>
+  <div id="listaInternamientos" class="lista"></div>
+
+  <button onclick="anterior(3)">Atrás</button>
+  <button onclick="siguiente(5)">Siguiente</button>
+</div>
+
+//pagina 5
+<div class="pagina" id="p5">
+  <h3>Resumen</h3>
+  <pre id="resultado"></pre>
+
+  <button onclick="anterior(4)">Atrás</button>
+  <button onclick="guardar()">Grabar</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
